@@ -8,7 +8,6 @@ public class SceneTransition : MonoBehaviour
         if (!string.IsNullOrEmpty(sceneName))
         {
             SceneManager.LoadScene(sceneName);
-            Debug.Log("Scene loaded: " + sceneName);
         }
     }
 }
