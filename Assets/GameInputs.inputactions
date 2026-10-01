@@ -68,7 +68,7 @@
             "id": "9ad3a74c-fd35-4a5e-85a7-69997ebf005f",
             "actions": [
                 {
-                    "name": "Confirm",
+                    "name": "Click",
                     "type": "Button",
                     "id": "51975abd-e35a-46e3-8a62-f013a79e5d3f",
                     "expectedControlType": "",
@@ -94,7 +94,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Confirm",
+                    "action": "Click",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -237,7 +237,7 @@
             "id": "f8b27297-4fbe-487e-9c6f-8269d403c20a",
             "actions": [
                 {
-                    "name": "Confirm",
+                    "name": "Click",
                     "type": "Button",
                     "id": "b7dd5ea0-5d9a-4f27-9d89-576c5e51cfdd",
                     "expectedControlType": "",
@@ -263,7 +263,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Confirm",
+                    "action": "Click",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

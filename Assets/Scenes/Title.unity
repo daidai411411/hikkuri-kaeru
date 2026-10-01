@@ -286,7 +286,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   inputActions: {fileID: -944628639613478452, guid: c90316405261c4a719bc7ffc83fb0519, type: 3}
-  sceneName: Title
 --- !u!4 &271281520
 Transform:
   m_ObjectHideFlags: 0
@@ -376,6 +375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   sceneTransition: {fileID: 365412804}
+  inputActions: {fileID: -944628639613478452, guid: c90316405261c4a719bc7ffc83fb0519, type: 3}
 --- !u!4 &1757732420
 Transform:
   m_ObjectHideFlags: 0
