@@ -3,18 +3,70 @@
     "name": "GameInputs",
     "maps": [
         {
-            "name": "UI",
-            "id": "9ad3a74c-fd35-4a5e-85a7-69997ebf005f",
+            "name": "Title",
+            "id": "86890c3a-66a8-4406-9a6a-8f7c03696e6f",
             "actions": [
                 {
-                    "name": "Pause",
+                    "name": "Start",
                     "type": "Button",
-                    "id": "2536f8e3-9716-4258-a030-b8de89533d85",
+                    "id": "b7a4501f-2991-4144-9502-854aed848a6c",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "97fc02a9-ac2a-4e2d-9d79-502fac1f19f6",
+                    "path": "<Keyboard>/anyKey",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Start",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 },
+                {
+                    "name": "",
+                    "id": "7035cf39-5a81-4ef6-88df-fc1fe321ff26",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Start",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e9da3c17-8bf3-4df8-9d58-3dcc5759b2c2",
+                    "path": "<Mouse>/middleButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Start",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "96796e24-8c87-492b-8529-60a60ebbbb70",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Start",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Menu",
+            "id": "9ad3a74c-fd35-4a5e-85a7-69997ebf005f",
+            "actions": [
                 {
                     "name": "Confirm",
                     "type": "Button",
@@ -23,24 +75,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "Cancel",
-                    "type": "Button",
-                    "id": "90482ba3-e7c0-4773-9c2b-1ac7366c3011",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Navigate",
-                    "type": "Value",
-                    "id": "04c127b0-0733-4331-b828-dab8974179dd",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
                 },
                 {
                     "name": "Point",
@@ -55,28 +89,6 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "a5c90005-03bc-45f5-bdd5-57c8d16806a8",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Pause",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "34eec403-d2c3-4876-886b-e09593cbe7a8",
-                    "path": "<Keyboard>/enter",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Confirm",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "67a70a0b-c6a0-437b-9f79-25842e58f32d",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
@@ -85,72 +97,6 @@
                     "action": "Confirm",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "d7c34498-0079-4e9c-bb75-d137623bd510",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Cancel",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "2D Vector",
-                    "id": "ac4564f4-18b2-4ede-8510-af7cfac3ec8a",
-                    "path": "2DVector",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Navigate",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "Up",
-                    "id": "9797fa86-cf44-4278-9062-c1c66dea51f1",
-                    "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Navigate",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "Down",
-                    "id": "8b11eb17-3d5c-414a-9865-d7cd04a1c09c",
-                    "path": "<Keyboard>/s",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Navigate",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "Left",
-                    "id": "850223a0-fb06-4799-824d-a72ff3d07d6d",
-                    "path": "<Keyboard>/a",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Navigate",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "Right",
-                    "id": "8e0b353e-4518-4f75-ab85-ed97f02775f3",
-                    "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Navigate",
-                    "isComposite": false,
-                    "isPartOfComposite": true
                 },
                 {
                     "name": "",
@@ -166,7 +112,7 @@
             ]
         },
         {
-            "name": "Frog",
+            "name": "Stage",
             "id": "f5d20496-bf77-4027-902d-ea80ec4b767c",
             "actions": [
                 {
@@ -191,6 +137,15 @@
                     "name": "Invert",
                     "type": "Button",
                     "id": "4e2f3433-4826-4889-97b5-07bb25c5ebae",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "aa71957e-dc01-408f-87d7-67e6ea85759b",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -261,6 +216,65 @@
                     "processors": "",
                     "groups": "",
                     "action": "Invert",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "73c51b30-09b8-46b4-be2e-754653b4d0ea",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Result",
+            "id": "f8b27297-4fbe-487e-9c6f-8269d403c20a",
+            "actions": [
+                {
+                    "name": "Confirm",
+                    "type": "Button",
+                    "id": "b7dd5ea0-5d9a-4f27-9d89-576c5e51cfdd",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Point",
+                    "type": "Value",
+                    "id": "39901a1a-667a-4929-8641-1798506a9bce",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c4152310-7f29-4bc2-866c-44e6ba48bb3b",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Confirm",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cd506c4d-1253-4240-8d14-cd36108c3df1",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Point",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
