@@ -107,3 +107,8 @@ InitTestScene*.unity*
 
 # Visual Studio Code settings
 .vsconfig
+
+# Visual Studio Code directories
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
