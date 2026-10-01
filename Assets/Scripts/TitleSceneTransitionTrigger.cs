@@ -7,7 +7,11 @@ public class TitleSceneTransitionTrigger : MonoBehaviour
 
     void Update()
     {
-        if (Keyboard.current.anyKey.wasPressedThisFrame)
+        if (Keyboard.current.anyKey.wasPressedThisFrame ||
+        Mouse.current.leftButton.wasPressedThisFrame ||
+        Mouse.current.rightButton.wasPressedThisFrame ||
+        Mouse.current.middleButton.wasPressedThisFrame
+        )
         {
             sceneTransition.LoadScene("Menu");
         }
