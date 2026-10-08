@@ -9,7 +9,7 @@ public class StageSelectionButton : MonoBehaviour
     public void OnClick()
     {
         currentStageIndex = stageIndex;
-        sceneTransition.LoadScene("Stage");
+        sceneTransition.LoadScene("Stage" + stageIndex);
     }
 
 }
