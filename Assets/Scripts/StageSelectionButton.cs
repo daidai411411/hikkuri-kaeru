@@ -4,7 +4,7 @@ public class StageSelectionButton : MonoBehaviour
 {
     [SerializeField] private int stageIndex;
     public static int currentStageIndex;
-    public SceneTransition sceneTransition;
+    [SerializeField] private SceneTransition sceneTransition;
 
     public void OnClick()
     {
