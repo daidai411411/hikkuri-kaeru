@@ -10,14 +10,8 @@ public class ContinueButton : MonoBehaviour
     [SerializeField] private GameObject retryButton;
     [SerializeField] private GameObject returnToMenuButton;
     [SerializeField] private GameObject pauseText;
-    private InputAction PauseAction;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Awake()
-    {
-        PauseAction = inputActions.FindAction("Stage/Pause");
-    }
 
-    void Pause()
+    public void Unpause()
     {
         overlay.SetActive(false);
         overlay2.SetActive(false);
@@ -30,13 +24,7 @@ public class ContinueButton : MonoBehaviour
     }
     public void OnClick()
     {
-        Pause();
-    }
-    void Update()
-    {
-        if(PauseAction.WasPressedThisFrame())
-        {
-            Pause();
-        }
+        PauseManager.isPaused = false;
+        Unpause();
     }
 }
