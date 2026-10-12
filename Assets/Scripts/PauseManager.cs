@@ -11,6 +11,7 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private GameObject continueButton;
     [SerializeField] private GameObject pauseText;
     private InputAction pauseAction;
+    static public bool isPaused = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -21,6 +22,9 @@ public class PauseManager : MonoBehaviour
     {
         if(pauseAction.WasPressedThisFrame())
         {
+            isPaused = !isPaused;
+            if(isPaused)
+            {
             Time.timeScale = 0f;
             overlay.SetActive(true);
             overlay2.SetActive(true);
@@ -29,6 +33,11 @@ public class PauseManager : MonoBehaviour
             continueButton.SetActive(true);
             pauseText.SetActive(true);
             //再開の処理はContinueButton.csのOnClick()に書く
+            }
+            else
+            {
+                continueButton.GetComponent<ContinueButton>().Unpause();
+            }
         }
     }
 }
