@@ -1510,6 +1510,7 @@ MonoBehaviour:
   retryButton: {fileID: 1040811948}
   returnToMenuButton: {fileID: 1852116977}
   pauseText: {fileID: 524868811}
+  pauseManager: {fileID: 1173770900}
 --- !u!1 &1611962064
 GameObject:
   m_ObjectHideFlags: 0
