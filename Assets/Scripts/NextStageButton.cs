@@ -12,6 +12,7 @@ public class NextStageButton : MonoBehaviour
     }
     public void OnClick()
     {
-        sceneTransition.LoadScene("Stage" + (StageSelectionButton.currentStageIndex + 1));
+        StageSelectionButton.currentStageIndex++;
+        sceneTransition.LoadScene("Stage" + StageSelectionButton.currentStageIndex);
     }
 }
