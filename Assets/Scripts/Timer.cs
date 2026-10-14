@@ -15,6 +15,7 @@ public class Timer : MonoBehaviour
         currentTime = 0f;
         timerText = GetComponent<TextMeshProUGUI>();
     }
+    //数字部分のみを等幅にするための関数
     string FormatNumericPartMonospace(string s)
     {
         string result = "";
@@ -55,7 +56,9 @@ public class Timer : MonoBehaviour
         }
         int minutes = (int)currentTime / 60;
         int seconds = (int)currentTime % 60;
-        int milliseconds = (int)(currentTime % 1 * 100);if (minutes == 0)
+        int milliseconds = (int)(currentTime % 1 * 100);
+        //0.00~59.99、1:00.00~となるようにフォーマット
+        if (minutes == 0)
         {
             text = $"{seconds:0}.{milliseconds:00}";
         }
@@ -64,6 +67,7 @@ public class Timer : MonoBehaviour
             text = $"{minutes:0}:{seconds:00}.{milliseconds:00}";
         }
         timerText.text = FormatNumericPartMonospace(text);
+
         //テスト用
         if (currentTime >= 4.99f)
         {
