@@ -6,7 +6,6 @@ public class ContinueButton : MonoBehaviour
 
     public void OnClick()
     {
-        PauseManager.isPaused = false;
         pauseManager.GetComponent<PauseManager>().Unpause();
     }
 }

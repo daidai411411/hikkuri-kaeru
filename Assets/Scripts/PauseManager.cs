@@ -13,25 +13,27 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private GameObject pauseText;
     private InputAction pauseAction;
     static public bool isPaused = false;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         pauseAction = inputActions.FindAction("Stage/Pause");
+        Unpause();
     }
     
     public void Pause()
-    {            
-            Time.timeScale = 0f;
-            overlay.SetActive(true);
-            overlay2.SetActive(true);
-            retryButton.SetActive(true);
-            returnToMenuButton.SetActive(true);
-            continueButton.SetActive(true);
-            pauseText.SetActive(true);
+    {
+        isPaused = true;
+        Time.timeScale = 0f;
+        overlay.SetActive(true);
+        overlay2.SetActive(true);
+        retryButton.SetActive(true);
+        returnToMenuButton.SetActive(true);
+        continueButton.SetActive(true);
+        pauseText.SetActive(true);
     }
 
     public void Unpause()
     {
+        isPaused = false;
         Time.timeScale = 1f;
         overlay.SetActive(false);
         overlay2.SetActive(false);
@@ -47,8 +49,7 @@ public class PauseManager : MonoBehaviour
     {
         if(pauseAction.WasPressedThisFrame())
         {
-            isPaused = !isPaused;
-            if(isPaused)
+            if(!isPaused)
             {
                 Pause();
             }
