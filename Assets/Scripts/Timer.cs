@@ -68,11 +68,12 @@ public class Timer : MonoBehaviour
         }
         timerText.text = FormatNumericPartMonospace(text);
 
-        //テスト用
+        /*テスト用
         if (currentTime >= 4.99f)
         {
             resultTime = (int)(currentTime*100);
             sceneTransition.LoadScene("Result");
         }
+        */
     }
 }
