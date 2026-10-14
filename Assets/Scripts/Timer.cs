@@ -71,6 +71,7 @@ public class Timer : MonoBehaviour
         /*テスト用
         if (currentTime >= 4.99f)
         {
+            StageSelectionButton.currentStageIndex = 2;
             resultTime = (int)(currentTime*100);
             sceneTransition.LoadScene("Result");
         }
