@@ -3,10 +3,9 @@ using UnityEngine;
 public class ClearTimeText : MonoBehaviour
 {
     [SerializeField] private TMPro.TextMeshProUGUI clearTimeText;
-    void Start()
+    void Awake()
     {
-        //時間を実装し次第ここも実装
-        clearTimeText.text = "00:00";
+        clearTimeText.text = (Timer.resultTime/100f).ToString("0.00") + "秒";
     }
 
 }
