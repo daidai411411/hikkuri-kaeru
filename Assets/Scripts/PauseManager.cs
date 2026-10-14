@@ -17,21 +17,25 @@ public class PauseManager : MonoBehaviour
     void Awake()
     {
         pauseAction = inputActions.FindAction("Stage/Pause");
+        isPaused = false;
+        Unpause();
     }
     
     public void Pause()
     {            
-            Time.timeScale = 0f;
-            overlay.SetActive(true);
-            overlay2.SetActive(true);
-            retryButton.SetActive(true);
-            returnToMenuButton.SetActive(true);
-            continueButton.SetActive(true);
-            pauseText.SetActive(true);
+        isPaused = !isPaused;
+        Time.timeScale = 0f;
+        overlay.SetActive(true);
+        overlay2.SetActive(true);
+        retryButton.SetActive(true);
+        returnToMenuButton.SetActive(true);
+        continueButton.SetActive(true);
+        pauseText.SetActive(true);
     }
 
     public void Unpause()
     {
+        isPaused = !isPaused;
         Time.timeScale = 1f;
         overlay.SetActive(false);
         overlay2.SetActive(false);
@@ -47,8 +51,7 @@ public class PauseManager : MonoBehaviour
     {
         if(pauseAction.WasPressedThisFrame())
         {
-            isPaused = !isPaused;
-            if(isPaused)
+            if(!isPaused)
             {
                 Pause();
             }
