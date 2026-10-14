@@ -1,28 +1,30 @@
 using UnityEngine;
+using TMPro;
 
 public class Rank : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI rankText;
     void Start()
     {
         if(ScoreText.score >= 9000)
         {
-            Debug.Log("S");
+            rankText.text = "S";
         }
         else if(ScoreText.score >= 8000)
         {
-            Debug.Log("A");
+            rankText.text = "A";
         }
         else if(ScoreText.score >= 7000)
         {
-            Debug.Log("B");
+            rankText.text = "B";
         }
         else if(ScoreText.score >= 6000)
         {
-            Debug.Log("C");
+            rankText.text = "C";
         }
         else
         {
-            Debug.Log("D");
+            rankText.text = "D";
         }
     }
 }
