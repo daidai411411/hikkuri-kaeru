@@ -6,9 +6,16 @@ public class InputManager : MonoBehaviour
 {
     [SerializeField] private InputActionAsset inputActions;
 
-    void Start()
+    void Awake()
     {
         inputActions.Disable();
-        inputActions.FindActionMap(SceneManager.GetActiveScene().name).Enable();
+        if(SceneManager.GetActiveScene().name.Contains("Stage"))
+        {
+            inputActions.FindActionMap("Stage").Enable();
+        }
+        else
+        {
+            inputActions.FindActionMap(SceneManager.GetActiveScene().name).Enable();
+        }
     }
 }
