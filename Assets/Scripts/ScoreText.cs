@@ -4,11 +4,10 @@ public class ScoreText : MonoBehaviour
 {
     public static int score;
     [SerializeField] private TMPro.TextMeshProUGUI scoreText;
-    void Start()
+    void Awake()
     {
-        
-        score = 10000 - StageFlipper.flipCount * 100;
-        //スコアの計算式ができたら入れる
+        //仮計算式、1万-反転回数*1000-クリアタイム(秒)*100
+        score = 10000 - StageFlipper.flipCount * 1000 - Timer.resultTime;
         scoreText.text = score.ToString();
     }
 }
