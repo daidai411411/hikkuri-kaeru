@@ -125,9 +125,27 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Point",
+                    "type": "Value",
+                    "id": "31e9ad33-7e34-4ffd-b966-d9c07228740c",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
                     "name": "Move",
                     "type": "Button",
                     "id": "bc15b59a-bc44-4ad2-9c7b-c7e7488cc202",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Click",
+                    "type": "Button",
+                    "id": "55dd3f08-8c02-4f4a-942b-0fd3c64fbcdc",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -188,6 +206,17 @@
                 },
                 {
                     "name": "",
+                    "id": "04747991-31ff-4657-955c-2a6e1231dd9c",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "1eade30d-dc93-483c-9bc3-0abcb32bbb76",
                     "path": "<Keyboard>/space",
                     "interactions": "",
@@ -205,6 +234,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "01b2f0f1-ab08-4c9e-a4ca-3c61dcb88ef1",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Point",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -248,7 +288,7 @@
                 {
                     "name": "Point",
                     "type": "Value",
-                    "id": "39901a1a-667a-4929-8641-1798506a9bce",
+                    "id": "8e41d01c-212c-418b-9554-b6f4aa639541",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
@@ -269,7 +309,7 @@
                 },
                 {
                     "name": "",
-                    "id": "cd506c4d-1253-4240-8d14-cd36108c3df1",
+                    "id": "2bd442ed-faae-459a-89ac-13ce8c41734e",
                     "path": "<Mouse>/position",
                     "interactions": "",
                     "processors": "",
