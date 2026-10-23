@@ -7,12 +7,14 @@ using UnityEngine.UI;
 public class SceneTransition : MonoBehaviour
 {
     [SerializeField] private Image overlayImage;
+    [SerializeField] private GameObject frog;
     private void Awake()
     {
         Color overlayColor = overlayImage.color;
         overlayColor.a = 0f;
         overlayImage.color = overlayColor;
         overlayImage.gameObject.SetActive(false);
+        frog.SetActive(false);
     }
     public void LoadScene(string sceneName = null)
     {
@@ -35,7 +37,12 @@ public class SceneTransition : MonoBehaviour
     private IEnumerator TransitionEffect()
     {
         overlayImage.gameObject.SetActive(true);
-        Debug.Log("TransitionEffect");
+        frog.SetActive(true);
+        Color overlayColor = overlayImage.color;
+        overlayColor.a = 1f;
+        overlayImage.color = overlayColor;
+        yield break;
+        /*
         for(int i = 0; i < 10; i++)
         {
             Color overlayColor = overlayImage.color;
@@ -43,5 +50,6 @@ public class SceneTransition : MonoBehaviour
             overlayImage.color = overlayColor;
             yield return new WaitForSeconds(0.1f);
         }
+        */
     }
 }
