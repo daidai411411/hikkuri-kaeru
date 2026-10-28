@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class SceneTransition : MonoBehaviour
 {
     [SerializeField] private Image overlayImage;
+    private bool isTransitioning = false;
     private void Awake()
     {
         Color overlayColor = overlayImage.color;
@@ -16,6 +17,8 @@ public class SceneTransition : MonoBehaviour
     }
     public void LoadScene(string sceneName = null)
     {
+        if (isTransitioning) return;
+        isTransitioning = true;
         StartCoroutine(LoadSceneAsync(sceneName));
     }
 
@@ -33,6 +36,7 @@ public class SceneTransition : MonoBehaviour
         {
             yield return null;
         }
+        isTransitioning = false;
         asyncload.allowSceneActivation = true;
     }
 
@@ -46,7 +50,7 @@ public class SceneTransition : MonoBehaviour
         {
             overlayColor.a += 0.1f;
             overlayImage.color = overlayColor;
-            yield return new WaitForSeconds(0.01f);
+            yield return null;
         }
     }
 }
