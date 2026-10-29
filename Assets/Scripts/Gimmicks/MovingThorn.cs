@@ -2,6 +2,7 @@ using UnityEngine;
 
 // 一定の間隔で「隠れる → 出てくる場所を予告 → 床からせり上がる → 出たまま → 沈む」を繰り返すいばら
 // 当たり判定は本体と一緒に動くので、床から出ている部分に触れたときだけ死ぬ
+// 沈んでいる間は当たり判定を切る。着地の瞬間にカエルが床へ少しめり込み、床のすぐ下のいばらに触れて死ぬのを防ぐため
 public class MovingThorn : MonoBehaviour
 {
     [Header("参照（プレハブで設定済み。触らなくてよい）")]
@@ -28,12 +29,14 @@ public class MovingThorn : MonoBehaviour
     [Tooltip("周期の途中から始める秒数。\n並べたいばらを順番に出したいときに、1本ずつずらして設定する")]
     [SerializeField] private float startOffset = 0f;
 
+    private Collider2D bodyCollider;
     private Vector3 outPosition;
     private Vector3 sunkPosition;
     private float elapsed;
 
     void Awake()
     {
+        bodyCollider = body.GetComponent<Collider2D>();
         outPosition = body.localPosition;
         sunkPosition = outPosition + Vector3.down * sinkDistance;
         elapsed = startOffset;
@@ -48,6 +51,7 @@ public class MovingThorn : MonoBehaviour
         elapsed = (elapsed + Time.deltaTime) % cycleDuration;
 
         warning.SetActive(elapsed >= hiddenDuration && elapsed < warningEnd);
+        bodyCollider.enabled = elapsed >= warningEnd;
 
         if (elapsed < warningEnd)
         {
