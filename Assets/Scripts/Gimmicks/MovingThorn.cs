@@ -2,7 +2,7 @@ using UnityEngine;
 
 // 一定の間隔で「隠れる → 出てくる場所を予告 → 床からせり上がる → 出たまま → 沈む」を繰り返すいばら
 // 当たり判定は本体と一緒に動くので、床から出ている部分に触れたときだけ死ぬ
-public class ThornCycle : MonoBehaviour
+public class MovingThorn : MonoBehaviour
 {
     [Header("参照（プレハブで設定済み。触らなくてよい）")]
     [Tooltip("上下に動くいばら本体。\n置いた位置が「出ている位置」になる")]

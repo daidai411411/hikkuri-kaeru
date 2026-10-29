@@ -119,13 +119,46 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &24387785
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 24387786}
+  m_Layer: 0
+  m_Name: MovingThorns
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &24387786
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24387785}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1680452975}
+  - {fileID: 1157628929}
+  m_Father: {fileID: 1907192653}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &42755132
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 440598889}
+    m_TransformParent: {fileID: 24387786}
     m_Modifications:
     - target: {fileID: 4312585342658660388, guid: a67eca5e7c74f53418a13643866613bb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -145,15 +178,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4312585342658660388, guid: a67eca5e7c74f53418a13643866613bb, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4312585342658660388, guid: a67eca5e7c74f53418a13643866613bb, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4312585342658660388, guid: a67eca5e7c74f53418a13643866613bb, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4312585342658660388, guid: a67eca5e7c74f53418a13643866613bb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -173,7 +206,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6559984648525521861, guid: a67eca5e7c74f53418a13643866613bb, type: 3}
       propertyPath: m_Name
-      value: ThornCycle (1)
+      value: MovingThorn(1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -214,8 +247,6 @@ Transform:
   - {fileID: 1571117081}
   - {fileID: 1376557445}
   - {fileID: 1907192653}
-  - {fileID: 1680452975}
-  - {fileID: 1157628929}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
@@ -596,6 +627,39 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4312585342658660388, guid: a67eca5e7c74f53418a13643866613bb, type: 3}
   m_PrefabInstance: {fileID: 42755132}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1228036058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1228036059}
+  m_Layer: 0
+  m_Name: FixedThorns
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1228036059
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228036058}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2001089680}
+  - {fileID: 1427463328}
+  m_Father: {fileID: 1907192653}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1279036143
 GameObject:
   m_ObjectHideFlags: 0
@@ -968,7 +1032,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1907192653}
+    m_TransformParent: {fileID: 1228036059}
     m_Modifications:
     - target: {fileID: 5598414391278301188, guid: b51fcd1121189ac459c9fcbb828d6e02, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1012,7 +1076,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7256854563074281744, guid: b51fcd1121189ac459c9fcbb828d6e02, type: 3}
       propertyPath: m_Name
-      value: Thorn (1)
+      value: FixedThorn (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1196,8 +1260,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2001089680}
-  - {fileID: 1427463328}
+  - {fileID: 1228036059}
+  - {fileID: 24387786}
   m_Father: {fileID: 440598889}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2001089680 stripped
@@ -1211,7 +1275,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 440598889}
+    m_TransformParent: {fileID: 24387786}
     m_Modifications:
     - target: {fileID: 4312585342658660388, guid: a67eca5e7c74f53418a13643866613bb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1231,15 +1295,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4312585342658660388, guid: a67eca5e7c74f53418a13643866613bb, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4312585342658660388, guid: a67eca5e7c74f53418a13643866613bb, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4312585342658660388, guid: a67eca5e7c74f53418a13643866613bb, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4312585342658660388, guid: a67eca5e7c74f53418a13643866613bb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1255,7 +1319,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6559984648525521861, guid: a67eca5e7c74f53418a13643866613bb, type: 3}
       propertyPath: m_Name
-      value: ThornCycle
+      value: MovingThorn
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1329,7 +1393,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1907192653}
+    m_TransformParent: {fileID: 1228036059}
     m_Modifications:
     - target: {fileID: 5598414391278301188, guid: b51fcd1121189ac459c9fcbb828d6e02, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1373,7 +1437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7256854563074281744, guid: b51fcd1121189ac459c9fcbb828d6e02, type: 3}
       propertyPath: m_Name
-      value: Thorn
+      value: FixedThorn
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

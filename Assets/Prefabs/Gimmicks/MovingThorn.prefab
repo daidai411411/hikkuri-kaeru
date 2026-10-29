@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4312585342658660388}
   - component: {fileID: 4801863822288241196}
   m_Layer: 0
-  m_Name: ThornCycle
+  m_Name: MovingThorn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
