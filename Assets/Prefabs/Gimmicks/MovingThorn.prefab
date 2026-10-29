@@ -48,12 +48,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ThornCycle
   body: {fileID: 5856550638416123390}
   warning: {fileID: 7721576722585799626}
-  sinkDistance: 0.55
+  sinkDistance: 1
   hiddenDuration: 2
   warningDuration: 1
   riseDuration: 0.15
   outDuration: 1.5
-  sinkDuration: 0.3
+  sinkDuration: 1
   startOffset: 0
 --- !u!1 &7721576722585799626
 GameObject:
@@ -160,7 +160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5598414391278301188, guid: b51fcd1121189ac459c9fcbb828d6e02, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.25
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5598414391278301188, guid: b51fcd1121189ac459c9fcbb828d6e02, type: 3}
       propertyPath: m_LocalPosition.z
