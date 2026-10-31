@@ -10,11 +10,15 @@ public class PlayerController : MonoBehaviour
     private InputAction jumpAction;
     private Rigidbody2D rb;
     private BoxCollider2D boxCollider;
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         moveAction = inputActions.FindAction("Stage/Move");
         jumpAction = inputActions.FindAction("Stage/Jump");
         // 開発用シーンにはInputManagerが無いため、ここで有効にする
@@ -24,15 +28,27 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        bool isGrounded = IsGrounded();
+
         // Aキーで-1、Dキーで1、何も押していなければ0
         float move = moveAction.ReadValue<float>();
         rb.linearVelocity = new Vector2(move * moveSpeed, rb.linearVelocity.y);
 
         // 地面に立っている時だけジャンプできる
-        if (jumpAction.WasPressedThisFrame() && IsGrounded())
+        if (jumpAction.WasPressedThisFrame() && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpPower);
         }
+
+        // 進む方向に合わせて左右の向きを変える（画像は右向きの想定）
+        if (move != 0)
+        {
+            spriteRenderer.flipX = move < 0;
+        }
+
+        // アニメーションの切り替えに使う値をAnimatorに渡す
+        animator.SetFloat("Speed", Mathf.Abs(move));
+        animator.SetBool("IsGrounded", isGrounded);
     }
 
     // カエルの足元のすぐ下に、床などの当たり判定があるか調べる
