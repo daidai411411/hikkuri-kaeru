@@ -178,7 +178,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -188,9 +188,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: 1de0e44ee52254d44825c3f1be4de312, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 1de0e44ee52254d44825c3f1be4de312, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: 1de0e44ee52254d44825c3f1be4de312, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 7ed420fc64547f746aa442df6f9f0cde, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -326,15 +326,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4f3ac462d8103744a8729c8f5c8a3a29, type: 2}
-  m_sharedMaterial: {fileID: -2776319691069942848, guid: 4f3ac462d8103744a8729c8f5c8a3a29, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a84fd6af0b4f88a4e96108db234c1a23, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 09f036420138e47418a959f14ac61b62, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0.9607843, g: 0.98039216, b: 0.92156863, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -579,15 +579,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4, g: 0.4, b: 0.4, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 2fc0396ac3acef148913f0fc94752946, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -676,7 +676,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -686,9 +686,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: 1de0e44ee52254d44825c3f1be4de312, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 1de0e44ee52254d44825c3f1be4de312, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: 1de0e44ee52254d44825c3f1be4de312, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -733,7 +733,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 7ed420fc64547f746aa442df6f9f0cde, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -810,15 +810,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u30EA\u30C8\u30E9\u30A4"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4f3ac462d8103744a8729c8f5c8a3a29, type: 2}
-  m_sharedMaterial: {fileID: -2776319691069942848, guid: 4f3ac462d8103744a8729c8f5c8a3a29, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a84fd6af0b4f88a4e96108db234c1a23, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 09f036420138e47418a959f14ac61b62, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4293655285
+  m_fontColor: {r: 0.9607843, g: 0.98039216, b: 0.92156863, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -835,8 +835,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 52
+  m_fontSizeBase: 52
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -947,15 +947,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u6B21\u306E\u30B9\u30C6\u30FC\u30B8"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4f3ac462d8103744a8729c8f5c8a3a29, type: 2}
-  m_sharedMaterial: {fileID: -2776319691069942848, guid: 4f3ac462d8103744a8729c8f5c8a3a29, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a84fd6af0b4f88a4e96108db234c1a23, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 09f036420138e47418a959f14ac61b62, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4293655285
+  m_fontColor: {r: 0.9607843, g: 0.98039216, b: 0.92156863, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -972,8 +972,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 52
+  m_fontSizeBase: 52
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1207,15 +1207,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u30E9\u30F3\u30AF"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4f3ac462d8103744a8729c8f5c8a3a29, type: 2}
-  m_sharedMaterial: {fileID: -2776319691069942848, guid: 4f3ac462d8103744a8729c8f5c8a3a29, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a84fd6af0b4f88a4e96108db234c1a23, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 09f036420138e47418a959f14ac61b62, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4288531380
+  m_fontColor: {r: 0.7058824, g: 0.79607844, b: 0.6156863, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1342,7 +1342,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: d17f7efbe8442ae4399714746be18724, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1432,7 +1432,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1442,9 +1442,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: 1de0e44ee52254d44825c3f1be4de312, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 1de0e44ee52254d44825c3f1be4de312, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: 1de0e44ee52254d44825c3f1be4de312, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -1489,7 +1489,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 7ed420fc64547f746aa442df6f9f0cde, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1717,15 +1717,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4f3ac462d8103744a8729c8f5c8a3a29, type: 2}
-  m_sharedMaterial: {fileID: -2776319691069942848, guid: 4f3ac462d8103744a8729c8f5c8a3a29, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a84fd6af0b4f88a4e96108db234c1a23, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 09f036420138e47418a959f14ac61b62, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0.9607843, g: 0.98039216, b: 0.92156863, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1855,15 +1855,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u30AF\u30EA\u30A2\u6642\u9593"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4f3ac462d8103744a8729c8f5c8a3a29, type: 2}
-  m_sharedMaterial: {fileID: -2776319691069942848, guid: 4f3ac462d8103744a8729c8f5c8a3a29, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a84fd6af0b4f88a4e96108db234c1a23, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 09f036420138e47418a959f14ac61b62, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4288531380
+  m_fontColor: {r: 0.7058824, g: 0.79607844, b: 0.6156863, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1993,15 +1993,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u30B9\u30B3\u30A2"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4f3ac462d8103744a8729c8f5c8a3a29, type: 2}
-  m_sharedMaterial: {fileID: -2776319691069942848, guid: 4f3ac462d8103744a8729c8f5c8a3a29, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a84fd6af0b4f88a4e96108db234c1a23, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 09f036420138e47418a959f14ac61b62, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4288531380
+  m_fontColor: {r: 0.7058824, g: 0.79607844, b: 0.6156863, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2144,15 +2144,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4f3ac462d8103744a8729c8f5c8a3a29, type: 2}
-  m_sharedMaterial: {fileID: -2776319691069942848, guid: 4f3ac462d8103744a8729c8f5c8a3a29, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a84fd6af0b4f88a4e96108db234c1a23, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 09f036420138e47418a959f14ac61b62, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0.9607843, g: 0.98039216, b: 0.92156863, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2282,15 +2282,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u53CD\u8EE2\u56DE\u6570"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4f3ac462d8103744a8729c8f5c8a3a29, type: 2}
-  m_sharedMaterial: {fileID: -2776319691069942848, guid: 4f3ac462d8103744a8729c8f5c8a3a29, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a84fd6af0b4f88a4e96108db234c1a23, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 09f036420138e47418a959f14ac61b62, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4288531380
+  m_fontColor: {r: 0.7058824, g: 0.79607844, b: 0.6156863, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2419,15 +2419,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u30E1\u30CB\u30E5\u30FC\u306B\u623B\u308B"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 4f3ac462d8103744a8729c8f5c8a3a29, type: 2}
-  m_sharedMaterial: {fileID: -2776319691069942848, guid: 4f3ac462d8103744a8729c8f5c8a3a29, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a84fd6af0b4f88a4e96108db234c1a23, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 09f036420138e47418a959f14ac61b62, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4293655285
+  m_fontColor: {r: 0.9607843, g: 0.98039216, b: 0.92156863, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2444,8 +2444,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 52
+  m_fontSizeBase: 52
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2602,15 +2602,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a84fd6af0b4f88a4e96108db234c1a23, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 09f036420138e47418a959f14ac61b62, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 0.9607843, g: 0.98039216, b: 0.92156863, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2753,15 +2753,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: N
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3c81991c6d14ca5418b033ef6487d3c3, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 6c4a8443dd54ab349a4a2a07ee396d70, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4287214529
+  m_fontColor: {r: 0.75686276, g: 0.7019608, b: 0.5372549, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
