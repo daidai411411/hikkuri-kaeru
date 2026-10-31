@@ -1,0 +1,963 @@
+fileFormatVersion: 2
+guid: 4b79a9c4521c043c4a975b7b93abe32f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1033026046176941906
+    second: crosshatch-1000_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: crosshatch-1000_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 839
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea8a5e1c844f9a1f0800000000000000
+      internalID: -1033026046176941906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_1
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 839
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70887e394b9ab412eb51ca2a48a58356
+      internalID: -1843633155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_2
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 839
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f63fdf8dd0e1454eb33e8a67885842a
+      internalID: 1498711911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_3
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 839
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 468a4c4317cd54f21b30abf9fec17a4f
+      internalID: -823416769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_4
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 839
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a78489fc86b24bd3925604fba00ae08
+      internalID: -1585419196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_5
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 839
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b007462544df24e2c8d77ed237835d3b
+      internalID: -171589868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 678
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02bc347f0628440eb9b6c5c986515ddc
+      internalID: 1754005623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_7
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 678
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ac378ca14ba644bd9dafca232ee0f3c
+      internalID: 75370900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_8
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 678
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b981960e93b454200817e8678d88aa13
+      internalID: -313272050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_9
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 678
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be81a019fbb114bfb984ffa1faf00f88
+      internalID: -2086951520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_10
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 678
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6ec03d25ec164ed590d220f0cdd392c
+      internalID: -1110361776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_11
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 678
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e1493815c77a4045afaa23e98021038
+      internalID: -1749876358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 517
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bba9971f8316474a8865b315cc5ea06
+      internalID: 748758026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_13
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 517
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb2c702c99d7c40d8b54ae7d19819d71
+      internalID: 1019036611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_14
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 517
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f127c42f19b954ea193cf38d16c38101
+      internalID: -1043644818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_15
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 517
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57c6a1a8cb02c4d8884c8e6ea1979ee9
+      internalID: 1961239927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_16
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 517
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee72f35d6049842b986a82ebb1b5ffbb
+      internalID: -1054575842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_17
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 517
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d124370686ef4cc08f417d25f61cf01
+      internalID: -552199270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 356
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80341dbfc30df40c08a2c108062021f6
+      internalID: 221525140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_19
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 356
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8857edbf0f6b04cc4a5a3047dbc27988
+      internalID: 179479633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_20
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 356
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04190226c35e44cb5a0727ead77c1341
+      internalID: -1574092504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_21
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 356
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddcbb844b29dc4f5b886b4b85730d67a
+      internalID: -424783208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_22
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 356
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9c2e58f9d2ad4cdf8e970eebc2864e0
+      internalID: 1770076013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_23
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 356
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5418aff7fb3142f99cbb400486969ae
+      internalID: 527677465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 195
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba9a799a0f0743029f86c019bc91796
+      internalID: 1518786311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_25
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 195
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdafeddb951f64aa1b32d4c30e16d7eb
+      internalID: -771319776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_26
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 195
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae919714ee7f744c08827c4ab3e6b109
+      internalID: 63540055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_27
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 195
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b950924eb5bbe4129932ae705ae2c806
+      internalID: -917891604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_28
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 195
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de0af64b227514b07a282da21a1b8de7
+      internalID: 2083670089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_29
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 195
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33881e6d793404e6e819bfe8a8b311f6
+      internalID: 810528572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 34
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0490b87a29254b16bc093d0f4c69772
+      internalID: 1870704402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_31
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 34
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f04e85dcf01849ad97cf33bcf7525f8
+      internalID: -114038332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_32
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 34
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 346376cf86afb4954aeffe940e423665
+      internalID: -1949978277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_33
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 34
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c7fb881192e647aebe4d3edcdc6a8f1
+      internalID: -479485514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_34
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 34
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 751f66633c3124f0495c189a720e785c
+      internalID: 1031823563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crosshatch-1000_35
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 34
+        width: 161
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60a4bafbd77004df2a634167aa0b2fb8
+      internalID: -1820384997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 764be74f1b56147fba907decc7fe2cf8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":161.0,"y":161.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      crosshatch-1000_0: -1033026046176941906
+      crosshatch-1000_1: -1843633155
+      crosshatch-1000_10: -1110361776
+      crosshatch-1000_11: -1749876358
+      crosshatch-1000_12: 748758026
+      crosshatch-1000_13: 1019036611
+      crosshatch-1000_14: -1043644818
+      crosshatch-1000_15: 1961239927
+      crosshatch-1000_16: -1054575842
+      crosshatch-1000_17: -552199270
+      crosshatch-1000_18: 221525140
+      crosshatch-1000_19: 179479633
+      crosshatch-1000_2: 1498711911
+      crosshatch-1000_20: -1574092504
+      crosshatch-1000_21: -424783208
+      crosshatch-1000_22: 1770076013
+      crosshatch-1000_23: 527677465
+      crosshatch-1000_24: 1518786311
+      crosshatch-1000_25: -771319776
+      crosshatch-1000_26: 63540055
+      crosshatch-1000_27: -917891604
+      crosshatch-1000_28: 2083670089
+      crosshatch-1000_29: 810528572
+      crosshatch-1000_3: -823416769
+      crosshatch-1000_30: 1870704402
+      crosshatch-1000_31: -114038332
+      crosshatch-1000_32: -1949978277
+      crosshatch-1000_33: -479485514
+      crosshatch-1000_34: 1031823563
+      crosshatch-1000_35: -1820384997
+      crosshatch-1000_4: -1585419196
+      crosshatch-1000_5: -171589868
+      crosshatch-1000_6: 1754005623
+      crosshatch-1000_7: 75370900
+      crosshatch-1000_8: -313272050
+      crosshatch-1000_9: -2086951520
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
