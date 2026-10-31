@@ -54,9 +54,14 @@ public class PlayerController : MonoBehaviour
     // カエルの足元のすぐ下に、床などの当たり判定があるか調べる
     private bool IsGrounded()
     {
-        Bounds bounds = boxCollider.bounds;
-        Vector2 checkPosition = new Vector2(bounds.center.x, bounds.min.y - 0.1f);
-        Vector2 checkSize = new Vector2(bounds.size.x * 0.9f, 0.1f);
-        return Physics2D.OverlapBox(checkPosition, checkSize, 0f) != null;
+        RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, 0.1f, LayerMask.GetMask("Ground"));
+        return hit.collider != null;
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (boxCollider == null) return;
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(boxCollider.bounds.center + Vector3.down * 0.1f, boxCollider.bounds.size);
     }
 }
