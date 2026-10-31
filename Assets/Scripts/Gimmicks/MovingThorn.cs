@@ -12,8 +12,8 @@ public class MovingThorn : MonoBehaviour
     [SerializeField] private GameObject warning;
 
     [Header("沈める深さ")]
-    [Tooltip("Body が出ている位置から床の中へ沈める距離。\nBody の高さより少し大きくして、沈んだときに床の表面から出ないようにする。\n床の厚さはこれより大きくすること")]
-    [SerializeField] private float sinkDistance = 0.55f;
+    [Tooltip("Body が出ている位置から床の中へ沈める距離。\nBody の高さと同じにすると、沈んだときに Body の上端が床の表面にそろって隠れる。\n床の厚さはこれ以上にすること")]
+    [SerializeField] private float sinkDistance = 1f;
 
     [Header("タイミング（秒）")]
     [Tooltip("床の中に隠れている時間。\n予告は出ず、触れても安全")]
