@@ -9,6 +9,7 @@ public class StageFlipper : MonoBehaviour
     [SerializeField] private InputActionAsset inputActions;
     [SerializeField] private Transform stageRoot;
     private InputAction invertAction;
+    private CameraFollow cameraFollow;
 
     void Awake()
     {
@@ -16,15 +17,18 @@ public class StageFlipper : MonoBehaviour
         invertAction = inputActions.FindAction("Stage/Invert");
         // 開発用シーンにはInputManagerが無いため、ここで有効にする
         invertAction.Enable();
+        cameraFollow = Camera.main.GetComponent<CameraFollow>();
     }
 
     void Update()
     {
-        if (invertAction.WasPressedThisFrame())
+        // ポーズ中と反転演出中は反転できない
+        if (invertAction.WasPressedThisFrame() && !PauseManager.isPaused && !cameraFollow.IsFlipping())
         {
             // カエルの位置を中心に、ステージ全体を180度回す
             stageRoot.RotateAround(transform.position, Vector3.forward, 180f);
             flipCount++;
+            cameraFollow.StartFlipEffect();
         }
     }
 }
