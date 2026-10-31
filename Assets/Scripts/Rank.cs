@@ -14,7 +14,11 @@ public class Rank : MonoBehaviour
         { 9000, 8000, 7000, 6000 }
     };
     void Start()
-    {
+    {   if(StageSelectionButton.currentStageIndex == 0)
+        {
+            Debug.LogError("ステージのインデックスが0です");
+            return;
+        }
         if(ScoreText.score >= borders[StageSelectionButton.currentStageIndex - 1, 0])
         {
             rankText.text = "S";

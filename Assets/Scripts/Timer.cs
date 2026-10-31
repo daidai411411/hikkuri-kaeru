@@ -74,6 +74,7 @@ public class Timer : MonoBehaviour
             StageSelectionButton.currentStageIndex = 2;
             resultTime = (int)(currentTime*100);
             sceneTransition.LoadScene("Result");
+            gameObject.SetActive(false);
         }
         */
     }
