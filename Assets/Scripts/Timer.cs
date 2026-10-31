@@ -7,6 +7,7 @@ public class Timer : MonoBehaviour
     public static int resultTime = 0;
     private string text;
     private float currentTime = 0f;
+    private bool isStopped = false;
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private SceneTransition sceneTransition;
     [SerializeField] private PauseManager pauseManager;
@@ -15,6 +16,16 @@ public class Timer : MonoBehaviour
         currentTime = 0f;
         timerText = GetComponent<TextMeshProUGUI>();
     }
+
+    /// <summary>
+    /// クリア時に呼ぶ。経過時間を resultTime（100倍したint）に記録し、以降の計測を止める。
+    /// </summary>
+    public void RecordResult()
+    {
+        isStopped = true;
+        resultTime = (int)(currentTime * 100);
+    }
+
     //数字部分のみを等幅にするための関数
     string FormatNumericPartMonospace(string s)
     {
@@ -50,7 +61,7 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        if (!PauseManager.isPaused)
+        if (!PauseManager.isPaused && !isStopped)
         {
             currentTime += Time.deltaTime;
         }
