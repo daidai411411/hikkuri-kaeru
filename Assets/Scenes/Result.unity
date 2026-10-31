@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1d7d0442b1cc6a418d88ba530269b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  sceneTransition: {fileID: 0}
+  sceneTransition: {fileID: 376775445}
 --- !u!114 &2877457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -656,7 +656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21be19dc1b1ee2446b131a9418742cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  sceneTransition: {fileID: 0}
+  sceneTransition: {fileID: 376775445}
 --- !u!114 &168908644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1414,7 +1414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62441df92691fd74e8837ab78f2ed5e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RetryButton
-  sceneTransition: {fileID: 0}
+  sceneTransition: {fileID: 376775445}
 --- !u!114 &767264663
 MonoBehaviour:
   m_ObjectHideFlags: 0
