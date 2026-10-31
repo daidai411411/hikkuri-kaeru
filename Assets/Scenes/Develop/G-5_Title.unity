@@ -356,6 +356,7 @@ GameObject:
   - component: {fileID: 723338660}
   - component: {fileID: 723338662}
   - component: {fileID: 723338661}
+  - component: {fileID: 723338663}
   m_Layer: 5
   m_Name: PressAnyKey
   m_TagString: Untagged
@@ -482,6 +483,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 723338659}
   m_CullTransparentMesh: 1
+--- !u!114 &723338663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723338659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db624c14b3a91ed428fad8967ee16d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FloatingMotion
+  amplitude: 5
+  period: 2
 --- !u!1 &969376806
 GameObject:
   m_ObjectHideFlags: 0
