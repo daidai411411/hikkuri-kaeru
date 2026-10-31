@@ -37,6 +37,7 @@ public class SceneTransition : MonoBehaviour
             yield return null;
         }
         isTransitioning = false;
+        MusicManager.instance.PlayMusic(sceneName);
         asyncload.allowSceneActivation = true;
     }
 
