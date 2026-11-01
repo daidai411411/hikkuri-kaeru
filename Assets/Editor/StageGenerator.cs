@@ -17,9 +17,6 @@ public static class StageGenerator
     private const string StageDataFolder = "Assets/StageData";
     private const string UndoName = "ステージ生成";
 
-    // カエル・ゴール・看板。配置はまだ実装していないので、知らない記号の警告から外すだけにしている
-    private static readonly char[] PendingSymbols = { 'F', 'G', '?' };
-
     [MenuItem("Tools/ステージ生成")]
     private static void GenerateForActiveScene()
     {
@@ -48,6 +45,7 @@ public static class StageGenerator
         StageLayout layout = StageLayout.Load(csvPath);
         StageTilePainter.Paint(layout, tilemaps, UndoName);
         StageGimmickPlacer.Result gimmicks = StageGimmickPlacer.Place(layout, gimmicksRoot, tilemaps.Stage.transform, UndoName);
+        StageMarkerPlacer.Place(layout, scene, tilemaps.Stage.transform, UndoName);
         WarnAboutUnknownSymbols(layout);
 
         EditorSceneManager.MarkSceneDirty(scene);
@@ -57,7 +55,7 @@ public static class StageGenerator
 
     private static void WarnAboutUnknownSymbols(StageLayout layout)
     {
-        HashSet<char> known = new HashSet<char>(StageTilePainter.Symbols.Concat(StageGimmickPlacer.Symbols).Concat(PendingSymbols));
+        HashSet<char> known = new HashSet<char>(StageTilePainter.Symbols.Concat(StageGimmickPlacer.Symbols).Concat(StageMarkerPlacer.Symbols));
         string[] unknown = layout.Cells
             .Where(pair => !known.Contains(pair.Value))
             .Select(pair => $"'{pair.Value}' ({pair.Key.x},{pair.Key.y})")
@@ -68,11 +66,141 @@ public static class StageGenerator
         }
     }
 
-    private static Transform FindByName(Scene scene, string name)
+    /// <summary>
+    /// シーンの中から名前で1つ探す（非アクティブも含む）。見つからなければ null。
+    /// </summary>
+    public static Transform FindByName(Scene scene, string name)
     {
         return scene.GetRootGameObjects()
             .SelectMany(root => root.GetComponentsInChildren<Transform>(true))
             .FirstOrDefault(t => t.name == name);
+    }
+}
+
+/// <summary>
+/// シーンに1つずつある目印（F カエル、G ゴール、? 看板）を、記号の位置へ動かす。
+/// どれも新しく作らず、Stage1 から複製したものを動かす。
+/// </summary>
+public static class StageMarkerPlacer
+{
+    private const char Frog = 'F';
+    private const char Goal = 'G';
+    private const char Sign = '?';
+    private const float LandingGap = 0.01f;
+
+    public static IEnumerable<char> Symbols => new[] { Frog, Goal, Sign };
+
+    /// <param name="layout">ステージの地図。</param>
+    /// <param name="scene">対象のシーン。Player・Goal・HELPS（看板の親）を名前で探す。</param>
+    /// <param name="stageSpace">セル座標の基準になる Transform（Stage Tilemap）。</param>
+    /// <param name="undoName">Undo に表示する名前。</param>
+    public static void Place(StageLayout layout, Scene scene, Transform stageSpace, string undoName)
+    {
+        PlaceFrog(layout, StageGenerator.FindByName(scene, "Player"), stageSpace, undoName);
+        PlaceGoal(layout, StageGenerator.FindByName(scene, "Goal"), stageSpace, undoName);
+        PlaceSigns(layout, StageGenerator.FindByName(scene, "HELPS"), stageSpace, undoName);
+    }
+
+    // 当たり判定の底をセルの下辺（床の表面）にそろえ、開始時に落ちたりめり込んだりしないようにする
+    private static void PlaceFrog(StageLayout layout, Transform player, Transform stageSpace, string undoName)
+    {
+        Vector2Int[] cells = CellsOf(layout, Frog);
+        if (!IsPlaceable(player, "Player", cells, Frog))
+        {
+            return;
+        }
+
+        BoxCollider2D body = player.GetComponent<BoxCollider2D>();
+        float bottomFromPivot = (body.offset.y - body.size.y / 2f) * player.lossyScale.y;
+        Vector2 local = new Vector2(cells[0].x + 0.5f, cells[0].y - bottomFromPivot + LandingGap);
+
+        Undo.RecordObject(player, undoName);
+        player.position = stageSpace.TransformPoint(local);
+    }
+
+    // ゴールは 1×1 のスプライトと当たり判定を縦に伸ばして使う（Stage1 と同じ作り）
+    private static void PlaceGoal(StageLayout layout, Transform goal, Transform stageSpace, string undoName)
+    {
+        Vector2Int[] cells = CellsOf(layout, Goal);
+        if (goal == null)
+        {
+            Debug.LogWarning("[ステージ生成] Goal が見つからないので、ゴールを置けませんでした");
+            return;
+        }
+        if (cells.Length == 0)
+        {
+            Debug.LogWarning("[ステージ生成] CSV に G がないので、ゴールを動かしませんでした");
+            return;
+        }
+
+        int column = cells[0].x;
+        int bottom = cells.Where(c => c.x == column).Min(c => c.y);
+        int top = bottom;
+        while (layout.Get(column, top + 1) == Goal)
+        {
+            top++;
+        }
+        if (cells.Any(c => c.x != column || c.y < bottom || c.y > top))
+        {
+            Debug.LogWarning($"[ステージ生成] G が縦1列につながっていません。x={column} の y={bottom}〜{top} だけをゴールにしました");
+        }
+
+        int height = top - bottom + 1;
+        Undo.RecordObject(goal, undoName);
+        goal.position = stageSpace.TransformPoint(new Vector2(column + 0.5f, bottom + height / 2f));
+        goal.localScale = new Vector3(goal.localScale.x, height, goal.localScale.z);
+    }
+
+    // 看板は左の ? から順に HELP1, HELP2… を割り当てる。余った看板は消さずに非表示にする（絵を後で使い回せるように）
+    private static void PlaceSigns(StageLayout layout, Transform signsRoot, Transform stageSpace, string undoName)
+    {
+        Vector2Int[] cells = CellsOf(layout, Sign).OrderBy(c => c.x).ThenByDescending(c => c.y).ToArray();
+        if (signsRoot == null)
+        {
+            if (cells.Length > 0)
+            {
+                Debug.LogWarning("[ステージ生成] HELPS が見つからないので、看板を置けませんでした");
+            }
+            return;
+        }
+
+        Transform[] signs = signsRoot.Cast<Transform>().OrderBy(t => t.name).ToArray();
+        for (int i = 0; i < signs.Length; i++)
+        {
+            Undo.RecordObject(signs[i].gameObject, undoName);
+            Undo.RecordObject(signs[i], undoName);
+            bool used = i < cells.Length;
+            signs[i].gameObject.SetActive(used);
+            if (used)
+            {
+                signs[i].position = stageSpace.TransformPoint(new Vector2(cells[i].x + 0.5f, cells[i].y + 0.5f));
+            }
+        }
+
+        if (cells.Length > signs.Length)
+        {
+            Debug.LogWarning($"[ステージ生成] ? が {cells.Length} 個ありますが、看板は {signs.Length} 枚しかありません。足りない分は HELPS の下に看板を足してください");
+        }
+    }
+
+    private static bool IsPlaceable(Transform target, string targetName, Vector2Int[] cells, char symbol)
+    {
+        if (target == null)
+        {
+            Debug.LogWarning($"[ステージ生成] {targetName} が見つからないので、{symbol} を置けませんでした");
+            return false;
+        }
+        if (cells.Length != 1)
+        {
+            Debug.LogWarning($"[ステージ生成] {symbol} は1つだけ置いてください（今は {cells.Length} 個）。{targetName} は動かしていません");
+            return false;
+        }
+        return true;
+    }
+
+    private static Vector2Int[] CellsOf(StageLayout layout, char symbol)
+    {
+        return layout.Cells.Where(pair => pair.Value == symbol).Select(pair => pair.Key).ToArray();
     }
 }
 
@@ -321,7 +449,7 @@ public static class StageGimmickPlacer
     public static Result Place(StageLayout layout, Transform gimmicksRoot, Transform stageSpace, string undoName)
     {
         Transform generated = GetOrCreateGenerated(gimmicksRoot, undoName);
-        WarnAboutUnmanagedObjects(gimmicksRoot, generated);
+        ConfirmRemoveUnmanagedObjects(gimmicksRoot, generated, undoName);
 
         Result result = new Result();
         Dictionary<string, GameObject> existing = new Dictionary<string, GameObject>();
@@ -546,17 +674,35 @@ public static class StageGimmickPlacer
         return created.transform;
     }
 
-    private static void WarnAboutUnmanagedObjects(Transform gimmicksRoot, Transform generated)
+    // Stage1 を複製したシーンには Stage1 のギミックが残るため、生成のたびに消すかどうかを聞く
+    private static void ConfirmRemoveUnmanagedObjects(Transform gimmicksRoot, Transform generated, string undoName)
     {
-        string[] unmanaged = gimmicksRoot.Cast<Transform>()
+        GameObject[] unmanaged = gimmicksRoot.Cast<Transform>()
             .Where(child => child != generated)
-            .Select(child => child.name)
+            .Select(child => child.gameObject)
             .ToArray();
-        if (unmanaged.Length > 0)
+        if (unmanaged.Length == 0)
         {
-            Debug.LogWarning($"[ステージ生成] Gimmicks の下に生成ツールの管理外のものがあります：{string.Join("、", unmanaged)}。"
-                + "Stage1 から複製したものなら削除してください");
+            return;
         }
+
+        string names = string.Join("、", unmanaged.Select(go => go.name));
+        bool remove = EditorUtility.DisplayDialog(
+            undoName,
+            $"Gimmicks の下に、生成ツールの管理外のものがあります：\n{names}\n\nStage1 から複製したものなら削除してください（Undo で戻せます）。",
+            "削除する",
+            "残す");
+        if (!remove)
+        {
+            Debug.LogWarning($"[{undoName}] Gimmicks の下の管理外のものを残しました：{names}");
+            return;
+        }
+
+        foreach (GameObject target in unmanaged)
+        {
+            Undo.DestroyObjectImmediate(target);
+        }
+        Debug.Log($"[{undoName}] Gimmicks の下の管理外のものを削除しました：{names}");
     }
 
     private static void SetLayerRecursively(GameObject target, int layer, string undoName)
