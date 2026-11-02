@@ -431,12 +431,13 @@ public static class StageGimmickPlacer
         { 'w', "MovingThorn" },
         { 'R', "Rock" },
         { '-', "Branch" },
+        { '_', "Branch" },
         { 'P', "PressurePlate" },
         { 'V', "VineGate" },
     };
 
     // PlayerController の接地判定が Ground レイヤーしか見ないため、乗れるギミックはシーン上で Ground にする
-    private static readonly HashSet<char> Footholds = new HashSet<char> { 'R', '-', 'P', 'V' };
+    private static readonly HashSet<char> Footholds = new HashSet<char> { 'R', '-', '_', 'P', 'V' };
 
     private static readonly HashSet<char> Solids = new HashSet<char> { '#', '=' };
 
@@ -511,6 +512,7 @@ public static class StageGimmickPlacer
             switch (symbol)
             {
                 case '-':
+                case '_':
                     List<Vector2Int> run = HorizontalRun(layout, cell);
                     grouped.UnionWith(run);
                     placements.Add(new Placement { Symbol = symbol, Origin = run[0], Size = new Vector2Int(run.Count, 1), WaveIndex = NoWave });
@@ -566,6 +568,12 @@ public static class StageGimmickPlacer
                 ResizeTiled(target, new Vector2(size.x, target.GetComponent<SpriteRenderer>().size.y), undoName);
                 // 枝の上面をセルの上辺にそろえ、床（#）の上に立つのと同じ高さで乗れるようにする
                 local = origin + new Vector2(size.x / 2f, 1f - target.GetComponent<SpriteRenderer>().size.y / 2f);
+                break;
+            case '_':
+                ResizeTiled(target, new Vector2(size.x, target.GetComponent<SpriteRenderer>().size.y), undoName);
+                // 逆向きの枝は当たる面がセルの下辺に来る。天井（#）の下面と同じ高さになり、反転後は床と同じ高さで乗れる
+                local = origin + new Vector2(size.x / 2f, target.GetComponent<SpriteRenderer>().size.y / 2f);
+                angle = 180f;
                 break;
             case 'V':
                 ResizeTiled(target, size, undoName);
